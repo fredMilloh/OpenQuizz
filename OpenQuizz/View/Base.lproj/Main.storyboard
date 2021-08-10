@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-4D-60Y">
+                                <rect key="frame" x="100" y="762" width="214" height="80"/>
+                                <color key="backgroundColor" red="0.40524643659999998" green="0.54921817780000004" blue="0.76473224159999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Bli-LZ-OLZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.94117653369999998" green="0.94117665289999997" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zih-Lx-ugl"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-m3-A8N">
+                                <rect key="frame" x="188.5" y="784" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-Am-Kxu">
+                                <rect key="frame" x="50" y="375" width="314" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQA-fO-3fX" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="94" width="245" height="245"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se cache donc le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsR-Ca-oRv">
+                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
+                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-AQ-pJE">
+                                        <rect key="frame" x="104.5" y="190" width="36" height="35"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75326806310000005" green="0.77232092620000004" blue="0.78823786969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="4jj-Lz-KVx"/>
+                                    <constraint firstItem="zsR-Ca-oRv" firstAttribute="top" secondItem="EQA-fO-3fX" secondAttribute="top" constant="8" id="Bvk-GO-zN3"/>
+                                    <constraint firstItem="zsR-Ca-oRv" firstAttribute="centerY" secondItem="EQA-fO-3fX" secondAttribute="centerY" id="R7V-bB-qo1"/>
+                                    <constraint firstItem="6RE-AQ-pJE" firstAttribute="centerX" secondItem="EQA-fO-3fX" secondAttribute="centerX" id="Rte-1d-c38"/>
+                                    <constraint firstAttribute="height" constant="245" id="ckp-nz-OFD"/>
+                                    <constraint firstItem="zsR-Ca-oRv" firstAttribute="centerX" secondItem="EQA-fO-3fX" secondAttribute="centerX" id="rTd-jG-zhA"/>
+                                    <constraint firstItem="zsR-Ca-oRv" firstAttribute="leading" secondItem="EQA-fO-3fX" secondAttribute="leading" constant="8" id="s1z-eY-iTC"/>
+                                    <constraint firstAttribute="bottom" secondItem="6RE-AQ-pJE" secondAttribute="bottom" constant="20" id="zHR-QL-12l"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="6RE-AQ-pJE" id="dDp-EZ-2sz"/>
+                                    <outlet property="label" destination="zsR-Ca-oRv" id="vyi-xq-Tmq"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.3506603539" green="0.40647196769999999" blue="0.49412935969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Jed-Am-Kxu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="375" id="00F-Sm-F1Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hXR-m3-A8N" secondAttribute="bottom" constant="41" id="35Y-A4-lIu"/>
+                            <constraint firstItem="CI3-4D-60Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="8qT-wa-bkV"/>
+                            <constraint firstItem="EQA-fO-3fX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FQA-pG-BDi"/>
+                            <constraint firstItem="Jed-Am-Kxu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ww2-4z-Vaj"/>
+                            <constraint firstItem="EQA-fO-3fX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Znx-3H-HtM"/>
+                            <constraint firstItem="Jed-Am-Kxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="i8B-bj-r16"/>
+                            <constraint firstItem="hXR-m3-A8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vQM-05-p0E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CI3-4D-60Y" secondAttribute="bottom" constant="20" id="vsZ-EN-n75"/>
+                            <constraint firstItem="CI3-4D-60Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yrj-Qg-meN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="hXR-m3-A8N" id="Ulm-bF-tQ3"/>
+                        <outlet property="newGameButton" destination="CI3-4D-60Y" id="qXW-8q-miR"/>
+                        <outlet property="questionView" destination="EQA-fO-3fX" id="LWo-GJ-eKb"/>
+                        <outlet property="scoreLabel" destination="Jed-Am-Kxu" id="DWg-eK-h0F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84.057971014492765" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon Error" width="36" height="35"/>
+    </resources>
+</document>
