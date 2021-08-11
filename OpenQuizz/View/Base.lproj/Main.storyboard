@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_0" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,20 +17,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQA-fO-3fX" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="40" y="47" width="281.5" height="281"/>
+                                <rect key="frame" x="40" y="40" width="240" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Où se cache donc le marsupilami ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsR-Ca-oRv">
-                                        <rect key="frame" x="8" y="8" width="265.5" height="265"/>
+                                        <rect key="frame" x="8" y="8" width="224" height="224"/>
                                         <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                        </variation>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-AQ-pJE">
-                                        <rect key="frame" x="122.5" y="226" width="36" height="35"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-AQ-pJE">
+                                        <rect key="frame" x="102.5" y="185" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6RE-AQ-pJE" secondAttribute="height" multiplier="1:1" id="eWf-od-FX0"/>
+                                            <constraint firstAttribute="height" constant="35" id="zIJ-wA-FRz">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                            </constraint>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.75326806310000005" green="0.77232092620000004" blue="0.78823786969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,30 +71,44 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-Am-Kxu">
-                                <rect key="frame" x="392" y="47" width="225" height="60"/>
+                                <rect key="frame" x="303.5" y="40" width="214.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9L9-mW-vWb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-4D-60Y">
-                                <rect key="frame" x="392" y="248" width="225" height="80"/>
+                                <rect key="frame" x="326" y="200" width="192" height="80"/>
                                 <color key="backgroundColor" red="0.40524643659999998" green="0.54921817780000004" blue="0.76473224159999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Bli-LZ-OLZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="Bli-LZ-OLZ">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" red="0.94117653369999998" green="0.94117665289999997" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="60"/>
+                                </variation>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zih-Lx-ugl"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-m3-A8N">
-                                <rect key="frame" x="486" y="269.5" width="37" height="37"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-m3-A8N">
+                                <rect key="frame" x="392" y="210" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0bC-oe-avL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="hXR-m3-A8N" secondAttribute="height" multiplier="1:1" id="RCQ-8D-bTF"/>
+                                </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <variation key="heightClass=compact" hidden="YES"/>
                             </activityIndicatorView>
@@ -95,6 +118,7 @@
                         <constraints>
                             <constraint firstItem="Jed-Am-Kxu" firstAttribute="top" secondItem="EQA-fO-3fX" secondAttribute="bottom" constant="20" id="2Uq-Cz-Hg7"/>
                             <constraint firstItem="hXR-m3-A8N" firstAttribute="centerX" secondItem="CI3-4D-60Y" secondAttribute="centerX" id="3RZ-Zo-skY"/>
+                            <constraint firstItem="EQA-fO-3fX" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.6" id="52i-e7-7rP"/>
                             <constraint firstItem="EQA-fO-3fX" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.75" id="6qs-ME-Bm6"/>
                             <constraint firstItem="EQA-fO-3fX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ql-6q-NaB"/>
                             <constraint firstItem="EQA-fO-3fX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="7zO-k8-wNh"/>
@@ -115,23 +139,24 @@
                             <constraint firstItem="EQA-fO-3fX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kc0-l2-weo"/>
                             <constraint firstItem="Jed-Am-Kxu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EQA-fO-3fX" secondAttribute="trailing" constant="8" symbolic="YES" id="pvF-pP-VeZ"/>
                             <constraint firstItem="Jed-Am-Kxu" firstAttribute="top" secondItem="EQA-fO-3fX" secondAttribute="top" id="sb8-1a-3w5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CI3-4D-60Y" secondAttribute="bottom" constant="30" id="urP-lH-raQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CI3-4D-60Y" secondAttribute="bottom" constant="50" id="urP-lH-raQ"/>
                             <constraint firstItem="EQA-fO-3fX" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.75" id="xWk-Q5-ny9"/>
                             <constraint firstItem="hXR-m3-A8N" firstAttribute="centerX" secondItem="CI3-4D-60Y" secondAttribute="centerX" id="yE3-b5-n2g"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="dck-KX-1TS"/>
+                                <exclude reference="52i-e7-7rP"/>
                                 <exclude reference="6qs-ME-Bm6"/>
                                 <exclude reference="Rjj-m5-YcC"/>
                                 <exclude reference="VMV-8w-OEx"/>
                                 <exclude reference="kc0-l2-weo"/>
-                                <exclude reference="pvF-pP-VeZ"/>
-                                <exclude reference="sb8-1a-3w5"/>
                                 <exclude reference="DIM-q7-47q"/>
                                 <exclude reference="doX-Je-Q8C"/>
                                 <exclude reference="gZF-hK-2zu"/>
                                 <exclude reference="3RZ-Zo-skY"/>
+                                <exclude reference="pvF-pP-VeZ"/>
+                                <exclude reference="sb8-1a-3w5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -145,11 +170,6 @@
                                 <include reference="VMV-8w-OEx"/>
                                 <include reference="kc0-l2-weo"/>
                                 <exclude reference="xWk-Q5-ny9"/>
-                                <exclude reference="2Uq-Cz-Hg7"/>
-                                <exclude reference="APw-gh-p79"/>
-                                <exclude reference="FbS-qH-Q14"/>
-                                <include reference="pvF-pP-VeZ"/>
-                                <include reference="sb8-1a-3w5"/>
                                 <include reference="DIM-q7-47q"/>
                                 <exclude reference="Nj1-QW-pXd"/>
                                 <include reference="doX-Je-Q8C"/>
@@ -157,6 +177,17 @@
                                 <include reference="3RZ-Zo-skY"/>
                                 <exclude reference="WwV-LE-ygF"/>
                                 <exclude reference="yE3-b5-n2g"/>
+                                <exclude reference="2Uq-Cz-Hg7"/>
+                                <exclude reference="APw-gh-p79"/>
+                                <exclude reference="FbS-qH-Q14"/>
+                                <include reference="pvF-pP-VeZ"/>
+                                <include reference="sb8-1a-3w5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="52i-e7-7rP"/>
+                                <exclude reference="xWk-Q5-ny9"/>
                             </mask>
                         </variation>
                     </view>
