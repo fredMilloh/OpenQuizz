@@ -1,5 +1,7 @@
 # OpenQuizz
-Quizz Game
+Quiz Game. 
+
+Application developed as part of the course [Develop an iPhone application with the MVC model](https://openclassrooms.com/fr/courses/4504796-developpez-une-application-iphone-avec-le-modele-mvc) by Ambroise Collon, teacher at [OpenClassRooms](https://openclassrooms.com/fr/).
 
 Device Orientation Portrait 
 
