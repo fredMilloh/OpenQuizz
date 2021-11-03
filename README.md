@@ -18,3 +18,8 @@ Device Orientation Landscape
 - Otherwise the card turns red with a cross indicating a wrong answer.
 - The counter increments with each correct answer.
 - After the tenth question, a new game can be started.
+
+----
+#### Application developed as part of a course
+----
+
